@@ -22,8 +22,3 @@ Character::Character(
     this->power = set_value(power);
 }
 
-void Character::add_skill(std::string skillName, unsigned short level) {
-    Skill skill {skillName , set_value(level)};
-    this->skills.push_back(skill);
-}
-

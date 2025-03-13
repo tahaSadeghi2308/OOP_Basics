@@ -21,7 +21,6 @@ public:
             unsigned short health,
             unsigned short power
     );
-    void add_skill(std::string skillName , unsigned short level);
     template<typename T>
     void set_value(T value);
 };
