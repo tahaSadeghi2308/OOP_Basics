@@ -1,0 +1,3 @@
+/home/whisper/projects/ap_projects/second_project/medical_patient/cmake-build-debug/CMakeFiles/app.dir
+/home/whisper/projects/ap_projects/second_project/medical_patient/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/whisper/projects/ap_projects/second_project/medical_patient/cmake-build-debug/CMakeFiles/rebuild_cache.dir

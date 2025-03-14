@@ -1,2 +1,5 @@
 notes.txt
 /.vscode
+**/.idea
+**/cmkae-build-debug
+**/build
