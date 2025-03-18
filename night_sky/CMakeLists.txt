@@ -1,3 +1,11 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 project(night_sky)
-add_executable(${PROJECT_NAME} main.cpp sky.cpp star.cpp)
+
+# Find Raylib
+find_package(raylib REQUIRED)
+
+# Create executable
+add_executable(night_sky main.cpp sky.cpp star.cpp)
+
+# Link Raylib
+target_link_libraries(night_sky raylib)

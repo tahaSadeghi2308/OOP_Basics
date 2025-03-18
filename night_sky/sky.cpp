@@ -28,3 +28,5 @@ void Sky::display(){
         cout << '\n';
     }
 }
+
+vector<vector<Star>> Sky::getStars(){ return this->stars; }

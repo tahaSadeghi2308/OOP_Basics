@@ -13,7 +13,7 @@ class Sky {
 public:
     Sky();
     void display();
+    std::vector<std::vector<Star>> getStars();
 };
-
 
 #endif
