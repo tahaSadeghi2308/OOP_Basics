@@ -15,6 +15,9 @@ class Event {
     std::string convertToString(time_t time);
 public:
     Event(std::string name);
+    time_t getStart();
+    time_t getEnd();
+    std::string getName();
     ~Event();
 };
 

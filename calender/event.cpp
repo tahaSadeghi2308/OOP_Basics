@@ -2,6 +2,10 @@
 
 using namespace std;
 
+time_t Event::getStart (){ return this->_eventStart; }
+time_t Event::getEnd (){ return this->_eventEnd; }
+string Event::getName (){ return this->_name; }
+
 u_short getData(string prompt , string range = ""){
     u_short data;
     while (true){
