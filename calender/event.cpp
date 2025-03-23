@@ -94,5 +94,8 @@ string Event::convertToString(time_t time){
 }
 
 Event::~Event(){
-    cout << "Evnet with name " << this->_name << " and start time " << convertToString(this->_eventStart) << " has been deleted\n";
+    if (!this->invoikDestructor)
+        cout << "Evnet with name " << this->_name << " and start time " << convertToString(this->_eventStart) << " has been deleted\n";
 }
+
+Event::Event(string name , time_t start , time_t end): _name(name) , _eventEnd(end) , _eventStart(start){}

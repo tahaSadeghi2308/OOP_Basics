@@ -14,7 +14,9 @@ class Event {
     time_t convertToTime(const char *time);
     std::string convertToString(time_t time);
 public:
+    bool invoikDestructor {false};
     Event(std::string name);
+    Event(std::string name , time_t start , time_t end);
     time_t getStart();
     time_t getEnd();
     std::string getName();
