@@ -5,9 +5,9 @@
 #include <utility>
 
 class Gps {
-    std::pair<short , short> location;
+    std::vector<std::pair<int , int>> locations;
 public:
-    Gps(short latitude , short longitude);
+    Gps();
     ~Gps();
 };
 
