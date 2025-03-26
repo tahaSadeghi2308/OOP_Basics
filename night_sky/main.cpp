@@ -1,33 +1,41 @@
 #include "sky.hpp"
 #include <raylib.h>
+#include <unistd.h>
+#include <iostream>
 
 using namespace std;
 
-void render(Sky sky)
-{
+void render(Sky sky) {
     const int screenWidth = 800;
     const int screenHeight = 600;
     InitWindow(screenWidth, screenHeight, "Star Chart");
-    SetTargetFPS(6);
-    while (!WindowShouldClose())
-    {
+    SetTargetFPS(60);
+    while (!WindowShouldClose()){
         BeginDrawing();
         ClearBackground(BLACK);
         
-        for(auto const row : sky.getStars()){
-            for(Star star: row){
-                DrawCircle(star.getXPos(), star.getYPos(), star.getBrightness(), WHITE);
+        srand(time(NULL));
+        int BSnumber {1};
+        for(auto row : sky.getStars())
+            for(Star star : row){
+                int randomNum {(rand() % 200) + 200};
+                DrawCircle(star.getXPos() + randomNum  , star.getYPos() + randomNum , 10 , WHITE);
             }
-        }
 
         EndDrawing();
     }
     CloseWindow();
 }
 
-int main()
-{
+int main(){
     Sky andromeda;
-    render(andromeda);
+    string isGraphycal;
+    cout << "Would you like to see it graphycal ?? (Y/n) ";
+    getline(cin , isGraphycal);
+    if (isGraphycal == "y")
+        render(andromeda);
+    else 
+        andromeda.display();
+
     return 0;
 }

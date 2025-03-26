@@ -9,7 +9,7 @@ Sky::Sky(){
         vector<Star> col;
         srand(time(NULL));
         for(int j {0}; j < this->_width; j++){
-            col.push_back(Star(i, j, ((rand() + i * j) % 100) + 1 , _width , _height));
+            col.push_back(Star(i , j , (rand() % 100) + 1));
         }
         stars.push_back(col);    
     }

@@ -7,8 +7,8 @@ typedef unsigned short u_short;
 
 class Sky {
     // width and height has default value 
-    u_short _width  {800};
-    u_short _height {600};
+    u_short _width  {20};
+    u_short _height {20};
     std::vector<std::vector<Star>> stars;
 public:
     Sky();
